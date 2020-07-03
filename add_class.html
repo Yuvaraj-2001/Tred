@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add class</title>
+    <link rel='icon' href='Tred.png'  type="image/icon type">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="all.css">
+   <style>
+    body
+    {
+    background-color: rgba(17, 0, 255, 0.322);
+    color: black;
+    }
+   </style>
+</head>
+<body>
+    
+    <section id="details_1">
+        <br>
+        <div class="container">
+        <header>
+            <button class="btn btn-warning" onclick="window.location.href='index.html';">Back To home</button>
+            <br><br>
+            <h2>Please fill the details</h2>
+            <br>
+        </header>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Class Name:&nbsp; &nbsp; &nbsp;</span></div><input type="text" class="form-control" id="newClass" placeholder="type here your new class name">
+        </div>
+        <br>
+            <ul class="list-group" id='out_tbl'>
+            </ul>
+        <br>
+        <div class="input-group">
+        <div class="input-group-prepend">
+        <span class="input-group-text">Subject Names: </span></div><input id='subname_txt' class="form-control" type='text' placeholder="Type your subject names"/> 
+        </div>
+        <br>
+        <button class='btn btn-primary fr' onclick="addsubName()"> + Add Subject</button><br>
+        <div id='num_div'></div>
+        <br><br><br>
+        <button class="btn btn-primary btn-block" onclick="hide()">Submit</button>
+    </div>
+    </section>
+    <section id="details_2">
+        <br><br>
+        <div class="container">
+        <div class="well">
+        <h2 style="color: #FB0;">You're just  one step ahead to create your class</h2>
+        <p style="color: #FB0;">Please add your students details</p>
+        </div>
+        <br>
+        <h3>Student roll no & Names</h3>
+        
+        <ul class="list-group" id="out_std">
+
+        </ul>
+        <br>
+        <div class="input-group">
+        <div class="input-group-prepend">
+        <span class="input-group-text">Student Roll </span></div>
+      <input class="form-control"  id='studentRollNum' type='text' placeholder="Type here your roll nuber"/>
+       </div>
+       <br>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <span class="input-group-text">Student Name</span></div><input id="studentName" class="form-control" type="text" placeholder="Type here your student name"/>
+        </div>
+        <br>
+        &nbsp;<button class="btn  btn-primary fr" onclick="addstudent()">+ Add student</button><br>
+        <div id='std_count'></div>
+        <br><br>
+       <button class="btn btn-success btn-block" onclick="create()">submit</button>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>

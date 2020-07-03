@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take attendance</title>
+    <link rel='icon' href='Tred.png'  type="image/icon type">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="all.css">
+    <style>
+    body
+    {
+    background-color: rgba(17, 0, 255, 0.322);
+    color: black;
+    }
+    </style>
+</head>
+<body onload="classpopup();load();selector();period();">
+    <div class='container'>
+    <br>
+    <button onclick="window.location.href = 'index.html'" class="btn"> < Back to home</button><img src="Tred.png" class="icon-tred fr" onclick="window.location.href = 'index.html'">
+    <br><br>
+    <br>
+    <div id='popup'>
+
+    </div>
+    <div id='secmain'>
+    <div id='sec1'>
+    <div class="well">
+    <h1>Select your class and period</h1> 
+    </div>
+    <div class="well">
+    <span class="text-h4"> Select your class: <span onclick="click(atn_class);" id='test'></span></h3>
+    </span>
+    </div>
+
+    <div class="well">
+    <span class="text-h4">Select your period
+    <span id='period'></span>
+    </span>
+    </div>
+    <br>
+    <button class="btn btn-primary btn-block" onclick="atnProcess();">Start taking attendance</button>
+    </div>
+
+    <div id='sec2'>
+        <h1>Select the absenties</h1>  
+        <br>
+        <div id='std_list'>
+
+        </div>
+        <button class="btn btn-primary btn-block" id='record' onclick="record();">Submit</button>
+        <br><br>
+    </div>
+  </div>
+    <script src="index.js"></script>
+    <script>
+  /* function absent(e){
+    console.log(e.path[1].id);
+   var id = e.path[1].id;
+   if(document.getElementById(id).checked == true){
+    var text = document.getElementById(id).innerText
+    alert( document.querySelector("#"+text+"+ label").innerText );
+   }
+   } */
+    </script>
+</body>
+</html>

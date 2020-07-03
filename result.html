@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+    <link rel='icon' href='Tred.png'  type="image/icon type">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="all.css">
+    <Style>
+        .border{
+            padding: 5px;
+            /* background-color: black; */
+            color: black;
+            /* border: black solid 3px; */
+            border-radius: 5px;
+        }
+        body{
+            background-color: rgba(17, 0, 255, 0.322);
+            color: black;
+        }
+
+    </Style>
+</head>
+<body onload="load();">
+    <div  class="container">
+     <br>
+    <button onclick='window.location.href = "index.html";' class="btn btn-primary"> Back to home</button>
+    <img src="Tred.png" class="icon-tred fr" onclick="window.location.href = 'index.html'">
+    <div id='allatt'>
+
+    </div>
+    <div id='single'>
+
+    </div>
+</div>
+<script>
+    var res = JSON.parse(localStorage.getItem('records'));
+function load(){
+    document.getElementById('allatt').style.display = 'block';
+    document.getElementById('single').style.display = 'none';
+console.log(res);
+var txt = '';
+var index;
+    txt += '<h1>List of all attendance</h1><br>';
+for(index = res.length - 1; index > 0; index--){
+    txt += '<div class="well border" onclick=getabsent('+ index +');>';
+    txt += '<h4>class: '+res[index].class+'</h4>';
+    txt += '<span style="float: right;">'+ res[index].date+', '+ res[index].time+'</span>'
+    txt += '<h3>Subject: '+res[index].session+'</h3></div><br>';
+}
+   document.getElementById('allatt').innerHTML = txt;
+}
+function getabsent(value){
+    document.getElementById('allatt').style.display = 'none';
+    document.getElementById('single').style.display = 'block';
+    console.log(res[value].absenties);
+ var txt = '';
+    txt += '<h1>Absenties of '+res[value].class+' for the session of '+res[value].session+'</h1>';
+    txt += '<h3>Time that you have took attendance '+res[value].date+ ' ' + res[value].time+'</h3>';
+    txt += '<h2>Absenties are</h2>';
+    var arr = res[value].absenties;
+    for(var index = 0; index < arr.length; index++){
+        txt += '<li class="list-group-item" >'+ arr[index] + '</li><br>';
+    } 
+    txt += '<button class="btn btn-primary btn-block" onclick="load();">Back</button>'
+    document.getElementById('single').innerHTML = txt;
+    
+}
+</script>
+</body>
+</html>

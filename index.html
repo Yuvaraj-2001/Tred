@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance-home</title>
+    <link rel='icon' href='Tred.png'  type="image/icon type">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="all.css">
+    <style>
+    body{
+        background-color: rgba(17, 0, 255, 0.322);
+        color: black;
+    }
+    </style>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="added_class" id="all_class">
+
+    </div>
+    <a href="add_class.html" class="add_class">+ Add class</a>
+</div>
+
+    <header class="container">
+        <h2><span style="font-size:30px;cursor:pointer" onclick="openNav();homeClass();">&#9776; <img src='Tred.png' class="icon-tred"> Tred Attendance webapp</span><span id="test"></span></h2>
+    </header>
+    <section class="container">
+        <br><br>
+        <div class="well">
+            <h2>Take atendance</h2><br>
+                <button onclick="window.location.href='attendance_page.html';" class="btn btn-primary">Let's Start!</button>   
+        </div>
+        <br>
+        <div class="well">
+            <h2>Attendance list of all</h2><br>
+            <div>
+            <button onclick="window.location.href='result.html';"  class="btn btn-primary">See it now</button>
+        </div>
+        </div>
+        <br>
+        <div class="well">
+            <h2>Absenties of last class you taken!</h2><br>
+            <div>
+            <button class="btn btn-primary">Check Now</button>
+        </div>
+        </div>
+    </section>
+    <script type ="text/javascript" src="index.js"></script>
+</body>
+</html>
