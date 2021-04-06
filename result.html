@@ -43,7 +43,7 @@ console.log(res);
 var txt = '';
 var index;
     txt += '<h1>List of all attendance</h1><br>';
-for(index = res.length - 1; index > 0; index--){
+for(index = res.length - 1; index > -1; index--){
     txt += '<div class="well border" onclick=getabsent('+ index +');>';
     txt += '<h4>class: '+res[index].class+'</h4>';
     txt += '<span style="float: right;">'+ res[index].date+', '+ res[index].time+'</span>'
